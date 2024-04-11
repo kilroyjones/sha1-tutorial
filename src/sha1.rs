@@ -15,7 +15,7 @@ impl Sha1 {
     }
 
     /// Computes the SHA-1 hash of the input string by taking in either a String of str type.
-    pub fn hash<T: AsRef<str>>(&mut self, key: T) -> [u8; 20] {
+    pub fn hash(&mut self, key: &str) -> [u8; 20] {
         // Initialize variables to the SHA-1's initial hash values.
         let (mut h0, mut h1, mut h2, mut h3, mut h4) = (H0, H1, H2, H3, H4);
 
